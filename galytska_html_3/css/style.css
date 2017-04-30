@@ -1,0 +1,135 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.clearfix:after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.wrapper {
+    width: 970px;
+    margin: 0 auto;
+    padding: 50px 46px;
+    background-color: #fff;
+    font-family: 'Open Sans', sans-serif;
+    box-shadow: 0 0 5px rgba(0,0,0,0.3);
+}
+
+.m-main {
+    width: 100%;
+    height: 40px;
+    margin-top: 37px;
+    background: linear-gradient(to right, #444343, #5e5e5e);
+}
+
+.menu-row {
+    font-size: 0;
+}
+
+.menu-row li {
+    display: inline-block;
+    margin-right: 35px;
+    font-size: 15px;
+}
+
+.menu-row li a {
+    display: block;
+    padding: 12px 26px;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.menu-row li a:hover,
+.menu-row .active-link {
+  background:
+  url('../img/bg_line.jpg') repeat-y 0 100% ,
+  url('../img/bg_line.jpg') repeat-y 100% 0 ,
+  url('../img/bg_main.jpg') repeat-x;
+}
+
+main {
+    margin-top: 40px;
+}
+
+.m-goods {
+    float: left;
+}
+
+.product-desc {
+    float: right;
+}
+
+.menu-column {
+    width: 240px;
+    height: 240px;
+    font-size: 0;
+}
+
+.menu-column li {
+    font-size: 12px;
+    letter-spacing: 1px;
+    border: 1px solid #c8c8c8;
+    border-bottom: none;
+}
+
+.menu-column li:last-child {
+    border-bottom: 1px solid #c8c8c8;
+}
+
+.menu-column li a {
+    display: block;
+    padding: 13px 23px;
+    color: #656363;
+    text-decoration: none;  
+}
+
+.menu-column li a:hover,
+.menu-column .active-link {
+    background: #f9f9f9;
+    color: #2c2c2c;
+    padding-left: 37px;
+}
+
+figcaption {
+    width: 630px;
+    padding: 32px 26px;
+    font-size: 13px;
+    line-height: 21px;
+}
+
+footer {
+    height: 40px;
+    margin-top: 26px;
+}
+
+.menu-footer {
+    float: left;
+    margin-top: 0;
+    background: #e1e1e1;
+}
+
+.copyright {
+  float: right;
+  margin-top: -28px;
+  padding-right: 32px;
+}
+
+.menu-row_footer li,
+.copyright {
+    font-size: 13px;
+}
+
+.menu-row_footer li a {
+    color: #000;
+    text-shadow: none;
+}
+
+.menu-row_footer li a:hover,
+.menu-row_footer .active-link {
+    background: none;
+    text-decoration: underline;
+}
+

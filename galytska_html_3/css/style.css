@@ -96,13 +96,16 @@ main {
 figcaption {
     width: 630px;
     padding: 32px 26px;
-    font-size: 13px;
+    font-size: 12px;
+    letter-spacing: 1px;
     line-height: 21px;
+    color: #2c2c2c;
 }
 
 footer {
     height: 40px;
     margin-top: 26px;
+    /*color: #2c2c2c;*/
 }
 
 .menu-footer {
@@ -115,16 +118,19 @@ footer {
   float: right;
   margin-top: -28px;
   padding-right: 32px;
+  color: #2c2c2c;
+  letter-spacing: 1px;
 }
 
 .menu-row_footer li,
 .copyright {
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .menu-row_footer li a {
-    color: #000;
+    color: #2c2c2c;
     text-shadow: none;
+    letter-spacing: 1px;
 }
 
 .menu-row_footer li a:hover,

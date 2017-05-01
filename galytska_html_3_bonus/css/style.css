@@ -1,0 +1,66 @@
+@font-face {
+    font-family: 'Tahoma';
+    src: url('../fonts/Tahoma-Regular/Tahoma-Regular.eot');
+    src: url('../fonts/Tahoma-Regular/Tahoma-Regular.eot?#iefix') format('embedded-opentype'),
+         url('../fonts//Tahoma-Regular/Tahoma-Regular.woff') format('woff'),
+         url('../fonts//Tahoma-Regular/Tahoma-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 400;
+}
+
+body {
+    font-family: 'Tahoma';
+    font-size: 11px;
+    color: #fff;
+}
+
+.wrapper {
+    width: 960px;
+    min-height: 883px;
+    margin: 0 auto;
+    padding: 0 70px;
+    background-image: url('../img/bg-image.png');
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+header {
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.contacts {
+    padding-bottom: 15px;
+}
+
+.contacts li:first-child {
+    padding-bottom: 5px;
+}
+
+main {
+    height: 450px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: space-between;
+}
+
+.country {
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+}
+
+.img-frame {
+    position: absolute;
+    top: -5px;
+    left: -3px;
+}
+
+footer {
+    margin-top: 180px;
+    text-align: center;
+}

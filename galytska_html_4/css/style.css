@@ -86,22 +86,21 @@ header {
 
 .dropdown-menu {
     height: 27px;
+    line-height: 27px;
     border-top: 1px solid #cacbcb;
     border-bottom: 1px solid #000;
     background: linear-gradient(0deg , #303030 , #373737);
     -moz-box-shadow: 0 3px 3px 0 rgba(0 , 0 , 0 , .5);
     -webkit-box-shadow: 0 3px 3px 0 rgba(0 , 0 , 0 , .5);
     box-shadow: 0 3px 3px 0 rgba(0 , 0 , 0 , .5);
-    z-index: 999;
+    z-index: 9;
 }
 
 .dropdown-menu ul:not(.submenu) {
-    height: inherit;
+    margin: 0;
     padding: 0 30px;
-    font-size: 0;
     display: flex;
     justify-content: space-around;
-    align-items: center;
 }
 
 .dropdown-menu ul li {
@@ -126,7 +125,7 @@ header {
     display: none;
     position: absolute;
     width: 150px;
-    top: 21px;
+    top: 28px;
     left: 0;
     background: linear-gradient(0deg , #303030 , #373737);
     -moz-box-shadow: 0 2px 5px 2px rgba(0 , 0 , 0 , .75);

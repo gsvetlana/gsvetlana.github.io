@@ -1,0 +1,181 @@
+// $color: #5e696d;
+$fontArial: Arial;
+$fontLucida: 'Lucida Sans Unicode';
+$headerSprite: url('../img/sprite-header.png');
+
+%for-blocks {
+    display: flex;
+    box-sizing: border-box;
+}
+
+%for-size {
+   font: {
+        family: $fontLucida;
+        size: 11px;
+    } 
+}
+
+button {
+    border: 0;
+    background-color: transparent;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.wrapper {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 0 46px;
+    @extend %for-blocks;
+    flex-direction: column;
+}
+
+header {
+    @extend %for-blocks;
+    flex-direction: column;
+
+    .general-info,
+    .phone-list,
+    .user-log-in ul,
+    .shortcuts {
+        @extend %for-blocks;
+    }
+
+    .user-log-in ul {
+        align-items: center;
+    }
+
+    .general-info {
+        height: 50px;
+        align-items: center;
+
+        .phone-list {
+            padding-top: 8px;
+            font: {
+                family: $fontArial;
+                size: 18px;
+            }
+            &:before {
+                background: $headerSprite;
+                width: 26px;
+                height: 21px;
+                content: '';
+                margin-left: 5px;
+            }
+                li:nth-child(2) {
+                    margin-left: 5px;
+                }
+                    a {
+                        color: #5e696d;
+                        letter-spacing: .5px;
+                    }       
+        } //.phone-list END
+
+        .user-log-in {
+            width: 495px;
+            height: 25px;
+            margin-left: 15px;
+            background-color: #b1bcc0;
+            background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
+            border-radius: 4px;
+            box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
+
+            fieldset {
+                border: none;
+                    ul {
+                        &:before {
+                            width: 18px;
+                            height: 21px;
+                            margin: 4px 0 0 7px;
+                            background: $headerSprite;
+                            background-position: -35px 0;
+                            content: '';
+                        }
+                        input {
+                            &[type='text'],
+                            &[type='password'] {
+                                width: 115px;
+                                height: 18px;
+                                padding: 2px 0 3px 4px;
+                                border: 1px solid #82949c;
+                                color: #97a2a6;
+                                @extend %for-size;
+                                box-shadow: 0 0 10px rgba(0 , 0 , 0 , .5);
+                                box-sizing: border-box;
+                            }
+                            &[type='password'] {
+                                margin-left: 5px;
+                            }
+                        }
+                        button {
+                            color: #fff;
+                            @extend %for-size;
+                        }
+                        li{
+                            &:nth-child(3) {
+                                padding-left: 7px;
+                                    button {
+                                        &:after {
+                                            padding-left: 3px;
+                                            color: #fff;
+                                            content: '|';
+                                        }
+                                    }
+                            }
+                            &:nth-child(4) {
+                                padding-left: 2px;
+                            }
+                            &:last-child button {
+                                padding-left: 19px;
+                                color: #bfbfbf;
+                                @extend %for-size;
+                                font-size: 12px;
+                                text-decoration: underline;
+                            }
+                        }
+                    }    
+            } //fieldset END
+        } // .user-log-in form END
+
+        .shortcuts {
+            width: 76px;
+            height: 21px;
+            margin-left: 17px;
+            padding: 0 8px;
+            align-items: center;
+            justify-content: space-between;
+            border: 1px solid #c1c8cb;
+            border-radius: 15px;
+            box-shadow: 0 0 3px #d3d8da;
+                li {
+                    height: 11px;
+                    background: $headerSprite;;
+                    cursor: pointer;
+                    &:first-child {
+                        width: 11px;
+                        background-position: -60px 0;
+                    }
+                    &:nth-child(2) {
+                        width: 14px;
+                        background-position: -78px 0;
+                    }
+                    &:nth-child(3) {
+                        width: 12px;
+                        background-position: -102px 0;
+                    }
+                }
+        } //shortcuts END
+    } //section .general-info END
+
+}

@@ -1,0 +1,27 @@
+@mixin search-form ($width-value, $color) {
+    width: $width-value;
+    height: 134px;
+    background-color: $color;
+    border: 1px solid #9c9c9d;
+    border-radius: 17px;
+    box-shadow: 2.6px 4.3px 5px rgba(104, 104, 104, 0.75);
+}
+
+@mixin elem-order ($margin-value) {
+    justify-content: space-between;
+    margin-top: $margin-value;
+}
+
+@mixin menu-item ($w-value, $h-value, $borderColor, $border-radius, $menuItemColor, $font-size){
+    width: $w-value;
+    height: $h-value;
+    background-color: $white;
+    border: 1px solid $borderColor;
+    border-radius: $border-radius;
+    color: $menuItemColor;
+    font: {
+        family: $fontLucida;
+        size: $font-size;
+    }
+    text-transform: uppercase;
+}

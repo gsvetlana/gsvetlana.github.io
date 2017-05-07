@@ -1,7 +1,6 @@
-// $color: #5e696d;
-$fontArial: Arial;
-$fontLucida: 'Lucida Sans Unicode';
-$headerSprite: url('../img/sprite-header.png');
+@import "partials/reset";
+@import "partials/variables";
+@import "partials/mixins";
 
 %for-blocks {
     display: flex;
@@ -15,28 +14,9 @@ $headerSprite: url('../img/sprite-header.png');
     } 
 }
 
-button {
-    border: 0;
-    background-color: transparent;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-}
-
-ul {
-    list-style-type: none;
-}
-
-a {
-    text-decoration: none;
-}
-
 .wrapper {
-    width: 1000px;
+    width: 910px;
     margin: 0 auto;
-    padding: 0 46px;
     @extend %for-blocks;
     flex-direction: column;
 }
@@ -48,7 +28,10 @@ header {
     .general-info,
     .phone-list,
     .user-log-in ul,
-    .shortcuts {
+    .shortcuts,
+    .prior-menu,
+    .prior-menu ul,
+    .basket {
         @extend %for-blocks;
     }
 
@@ -84,10 +67,10 @@ header {
 
         .user-log-in {
             width: 495px;
-            height: 25px;
+            height: 27px;
             margin-left: 15px;
             background-color: #b1bcc0;
-            background-image: linear-gradient(180deg, #206988 0%, #114165 59%, #0c3256 100%);
+            background-image: $gradient;
             border-radius: 4px;
             box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, 0.75);
 
@@ -178,4 +161,311 @@ header {
         } //shortcuts END
     } //section .general-info END
 
+    .prior-menu {
+        width: 912px;
+        height: 34px;
+        @include elem-order(2px);
+        background: linear-gradient(to bottom, rgba(87 , 96 , 104 , 1) 0%, rgba(0 , 0 , 0 , 1) 100%);
+        border: 1px solid #2c345a;
+        border-radius: 4px;
+        box-shadow: 0 3px 5px 0 rgba(0 , 0 , 0 , .75);
+            ul {
+                padding-left: 132px;
+                align-items: center;
+                font-size: 0;
+                li {
+                    text-transform: uppercase;
+                        a {
+                            padding: 3px 13px;
+                            color: #b1bcc0;
+                            font: {
+                                family: $fontLucida;
+                                size: 14px;
+                            }
+                            // letter-spacing: .5px;
+                            text-decoration: none;
+                            &:hover {
+                                background-color: #f60303;
+                                color: #fff;
+                                background-image: $gradient;
+                                border-radius: 25px;
+                            }
+                        }
+                }
+
+            }
+            .basket {
+                align-items: center;
+                margin-top: -3px;
+                padding-right: 13px;
+                font: {
+                    family: $fontArial;
+                }
+                button {
+                    width: 21px;
+                    height: 17px;
+                    background: $headerSprite;
+                    background-position: -120px 0;
+                    // cursor: pointer;
+                }
+                span {
+                    padding-left: 4px;
+                    color: #929b9f;
+                    font-size: 11px;
+                    .sum {
+                        color: #0d5a8f;
+                        font-size: 12px;
+                        &:first-child {
+                            padding-right: 12px;
+                        }
+                        &:last-child {
+                            padding-left: 10px;
+                            letter-spacing: .5px;
+                        }
+                    }
+                }
+            } //block .basket END
+    }//section .prior-menu END
+
+} //header END
+
+.search {
+    @extend %for-blocks;
+    @include elem-order(12px);
+    .search-auto {
+        h3 {
+            color: $dark-blue;
+        }
+        @include search-form(416px, $white);
+    }
+
+    .search-tire {
+        @include search-form(193px, $white);
+    }
+
+    .search-wheel-disk {
+        @include search-form(268px, $white);
+    }
+} //search forms END
+
+main {
+    @extend %for-blocks;
+    @include elem-order(14px);
+    .product-list {
+        width: 526px;
+        height: 627px;
+        @extend %for-blocks;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-content: space-around;
+        font-family: $fontLucida;
+        background: linear-gradient(to top, rgba(35, 75, 93, 0.490196), rgba(201, 207, 209, 0.490196));
+        border-radius: 3px;
+            .product-item {
+                text-align: center;
+            }
+
+            .item-desc {
+                color: #1f2528;
+                font-size: 13px;
+                span {
+                    display: block;
+                    color: #206988;
+                    font-size: 15px;
+                }
+                
+            }
+            .goods-img {
+                @extend %for-blocks;
+                justify-content: center;
+                width: 138px;
+                height: 129px;
+                background-color: white;
+                border: 1px solid #a4aeb1;
+                border-radius: 7px;
+                img {
+                    padding: 5px;
+                }
+            }
+
+            .item-price {
+                padding-top: 5px;
+                color: #114165;
+                font: {
+                    family: $fontArial;
+                    weight: 700;
+                    style: italic;
+                    size: 16px;
+                }
+                span {
+                    font-size: 12px;
+                }
+            }
+    } // section .product-list END
+    h2 {
+        @include menu-item (181px, 27px, $menuItemBorder, 10px, $menuItemColor, 13px);
+        box-shadow: 1.5px 2.6px 3px rgba(150, 150, 150, .75);
+        @extend %for-blocks;
+        align-items: center;
+        &:before {
+            content: '';
+            background: $mainSprite;
+            background-position: 0 0;
+            display: block;
+            width: 22px;
+            height: 22px;
+            margin: -3px 2px 0 2px;
+        }
+    }
+
+    .product-catalogue-menu,
+    .brands form {
+        margin-top: 10px;
+    }
+    
+    .product-catalogue-menu > ul > li > a,
+    .brands-tire-list > li > a,
+    .brands-disks-list > li > a {
+        @include menu-item (138px, 28px, $menuItemBorder, 15px, $menuItemColor, 14px);
+        @extend %for-blocks;
+        align-items: center;
+        &:before {
+            content: '';
+            background: $mainSprite;
+            background-position: -24px 0;
+            display: block;
+            width: 23px;
+            height: 24px;
+            margin: 0 3px;
+        }
+    }
+
+    .brands-tire-list li input[type="checkbox"], 
+    .brands-disks-list li input[type="checkbox"] {
+        display: none;
+    }
+
+    .brands-tire-list li input[type="checkbox"] + label, 
+    .brands-disks-list li input[type="checkbox"] + label {
+        @extend %for-blocks;
+        align-items: center;
+    }
+
+    .brands-tire-list li input[type="checkbox"] + label:before, 
+    .brands-disks-list li input[type="checkbox"] + label:before {
+        content: '';
+        background: $mainSprite;
+        background-position: -60px 0;
+        display: block;
+        width: 13px;
+        height: 23px;
+        margin: -3px 12px 0 0;
+
+    }
+
+    .product-catalogue-menu .menu-items {
+        padding-left: 36px;
+            li {
+                height: 100%;
+                    a {
+                        @extend %for-blocks;
+                        position: relative;
+                        height: 26px;
+                        padding: 6px 0;
+                        color: #465961;
+                        font-family: $fontLucida;
+                        font-size: 13px;
+                        &:before {
+                            content: '';
+                            background: $mainSprite;
+                            background-position: -50px 0;
+                            display: block;
+                            width: 10px;
+                            height: 12px;
+                            margin: -2px 2px 0 -2px;
+                        }
+                        &:hover {
+                            color: #0c3256;
+                            font: italic bold 14px 'Arial Bold', sans-serif;
+                            text-decoration: underline;
+                            &:before {
+                            background-position: -50px -12px;
+                            margin: 2px 2px 0 -2px;
+                        }
+                        }
+                    }
+            }
+    }
+
+    .brands-list {
+        padding-left: 10px;
+        .brands-tire-list,
+        .brands-disks-list {
+            li:not(:first-child) {
+                margin-bottom: 5px;
+                padding: 2px 0 0 10px;
+                color: #465961;
+                font-family: $fontLucida;
+                font-size: 13px;
+            }
+        }
+        & > li:last-child button{
+            width: 82px;
+            height: 26px;
+            margin: 17px 0 0 10px;
+            color: #e5e9ea;
+            @extend %for-size;
+            text-transform: uppercase;
+            background: linear-gradient(rgb(32, 105, 136) 0%, rgb(17, 65, 101) 59%, rgb(12, 50, 86) 100%);
+            border: 1px solid #a7abae;
+            border-radius: 15px;
+            box-shadow: rgba(0, 0, 0, 0.298039) 3px 4px 2px -2px;
+        }
+    }
+
+} //section main END
+
+.brands-menu {
+    ul {
+        @extend %for-blocks;
+        justify-content: space-around;
+        align-items: center;
+        padding: 30px 118px;
+    }
 }
+
+footer {
+    @extend %for-blocks;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    font-family: $fontArial;
+    background-color: #213a4d;
+    border: 1px solid #242a3c;
+    ul {
+        @extend %for-blocks;
+        margin: 12px 0 16px;
+        font-size: 0px;
+        li {
+            font-size: 12px;
+
+            &:not(:last-child):after {
+                padding: 0 12px;
+                color: #bec6c9;
+                content: '|';
+            }
+            a {
+                color: #bec6c9;
+                &:hover {
+                    color: #52abcb;
+                }
+            }
+        }
+    }
+
+    span {
+        color: #7f4740;
+        font-size: 10px;
+    }
+} //footer END

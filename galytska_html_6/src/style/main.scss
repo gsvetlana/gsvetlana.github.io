@@ -272,6 +272,7 @@ main {
                     display: block;
                     color: #206988;
                     font-size: 15px;
+                    font-weight: bold;
                 }
                 
             }
@@ -340,27 +341,11 @@ main {
         }
     }
 
-    .brands-tire-list li input[type="checkbox"], 
-    .brands-disks-list li input[type="checkbox"] {
-        display: none;
-    }
-
-    .brands-tire-list li input[type="checkbox"] + label, 
-    .brands-disks-list li input[type="checkbox"] + label {
+    .brands-tire-list li,
+    .brands-disks-list li {
         @extend %for-blocks;
         align-items: center;
-    }
-
-    .brands-tire-list li input[type="checkbox"] + label:before, 
-    .brands-disks-list li input[type="checkbox"] + label:before {
-        content: '';
-        background: $mainSprite;
-        background-position: -60px 0;
-        display: block;
-        width: 13px;
-        height: 23px;
-        margin: -3px 12px 0 0;
-
+        padding: 3px;
     }
 
     .product-catalogue-menu .menu-items {
@@ -389,9 +374,9 @@ main {
                             font: italic bold 14px 'Arial Bold', sans-serif;
                             text-decoration: underline;
                             &:before {
-                            background-position: -50px -12px;
-                            margin: 2px 2px 0 -2px;
-                        }
+                                background-position: -50px -12px;
+                                margin: 2px 2px 0 -2px;
+                            }
                         }
                     }
             }
@@ -412,7 +397,7 @@ main {
         & > li:last-child button{
             width: 82px;
             height: 26px;
-            margin: 17px 0 0 10px;
+            margin: 10px 0 0 14px;
             color: #e5e9ea;
             @extend %for-size;
             text-transform: uppercase;

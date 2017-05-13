@@ -1,0 +1,49 @@
+@media (min-width: 768px) and (max-width: 959px) {
+    header {
+        height: 800px;
+        .wrapper {
+            @include flex-box(column, flex-start, flex-start);
+            padding: {
+                left: 20px;
+                right: 20px;
+            }
+            .nav-block {
+                .prior-menu {
+                    margin-top: 35px;
+                }
+                .menu__item {
+                    margin-right: 50px;
+                }
+            }
+        }
+
+        .slider {
+            margin-top: 80px;
+        }
+        .slide {
+            &__heading {
+                font-size: 48px;
+            }
+            &__subheading {
+                font-size: 24px;
+            }
+            &__text {
+                font-size: 16px;
+            }
+        }
+    }// header END
+
+    .about-info {
+        padding: 0 20px;
+        .wrapper {
+            height: 342px;
+            .block__title {
+                font-size: 24px;
+            }
+            .block__paragraph {
+                height: 125px;
+                overflow: hidden;
+            }
+        }
+    } //.about-info section END
+}

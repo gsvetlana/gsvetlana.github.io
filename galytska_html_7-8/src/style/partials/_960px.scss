@@ -1,0 +1,40 @@
+@media (min-width: 960px) {
+    header {
+        height: 846px;
+        .wrapper {
+            @include flex-box(row, space-between, center);
+            .nav-block {
+                .menu__item {
+                    margin-left: 50px;
+                }
+            }
+        }
+
+        .slider {
+            margin-top: 170px;
+        }
+        .slide {
+            &__heading {
+                font-size: 60px;
+            }
+            &__subheading {
+                font-size: 32px;
+            }
+            &__text {
+                font-size: 18px;
+            }
+        }
+    } //header END
+
+    .about-info {
+        .wrapper {
+            height: 340px;
+            .block__title {
+                font-size: 30px;
+            }
+        }
+        
+    } //.about-info section END
+
+
+}

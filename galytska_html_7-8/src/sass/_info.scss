@@ -1,0 +1,27 @@
+.info {
+    height: 37.375rem;
+    padding: 4.375rem 1.25rem;
+    &__item:before {
+        display: block;
+        float: left;
+        width: 27px;
+        height: 25px;
+        background: url(../img/icons_sprite.png) no-repeat;
+        content: '';
+    }
+    &__item:nth-child(2):before {
+        width: 30px;
+        background-position: -25px 0;
+    }
+    &__item:nth-child(3):before {
+        background-position: -55px 0;
+    }
+}
+
+.article {
+    margin-bottom: 1rem;
+    padding-left: 1.5652rem;
+    display: flex;
+    flex-direction: column;
+
+}

@@ -3,6 +3,7 @@
 @import "core/typography";
 
 @import "header";
+@import "info";
 
 
 .wrapper {
@@ -15,6 +16,12 @@
         background-repeat: no-repeat;
         background-attachment: scroll;
     }
+    &--purple {
+        border-top: 1px solid #33253a;
+        border-bottom: 1px solid #0d151b;
+        background: linear-gradient(to top, #322539 0%, #745083 100%);
+        box-shadow: 0 1px 8px rgba(0, 0, 0, .5);
+    }
 }
 
 .container {
@@ -22,4 +29,27 @@
     min-width: 20rem;
     max-width: 60rem;
 }
-//HEADER
+
+.article__title {
+    text-shadow: 0.5px 0.9px 0 #0f1518;
+    color: $white;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.article__text {
+    text-shadow: 0.5px 0.9px 0 #0f1518;
+    color: $white;
+    font-weight: 300;
+}
+
+.article__link {
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $white;
+    align-self: flex-end;
+    &:hover {
+        text-shadow: 0 0 8px rgba(255, 255, 255, .8);
+    }
+}
+

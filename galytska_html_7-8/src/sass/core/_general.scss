@@ -1,0 +1,46 @@
+$white: #fff;
+$purple: #edbfff;
+$dark: #454545;
+
+//для телефонів з великим екраном
+$mobile: "screen and (min-width: 480px)";
+
+//для нетбуків і планшетів
+$tablet: "screen and (min-width: 768px)";
+
+//для великих екранів
+$notebook: "screen and (min-width: 960px)";
+
+
+// Vars
+$browser-context: 16;
+$base-font-size: 1rem;
+$base-line-height: $base-font-size * 1.25;
+
+$font-size: (
+  'small': 0.75rem, //12px
+  'medium': $base-font-size,
+  'large': 1.5rem, //24px
+  'xs-large': 2.25rem //36px
+);
+
+$line-height: (
+  'small': $base-line-height, 
+  'medium': $base-line-height,
+  'large': $base-line-height * 2,
+  'xs-large': $base-line-height * 2
+);
+
+// Rules
+@function font-size($level) {
+  @return map-get($font-size, $level);
+}
+
+@function line-height($level) {
+  @return map-get($line-height, $level);
+}
+
+@mixin font-settings($level: 0) {
+  font-size: font-size($level);
+  line-height: line-height($level);
+}

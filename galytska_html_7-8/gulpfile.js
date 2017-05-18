@@ -22,14 +22,14 @@ var path = {
 
     src: { 
         html: 'src/*.html',
-        style: 'src/style/main.scss',
+        style: 'src/sass/main.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     },
 
     watch: { //за изменением каких файлов мы хотим наблюдать
         html: 'src/**/*.html',
-        style: 'src/style/**/*.scss',
+        style: 'src/sass/**/*.scss',
         img: 'src/img/**/*.*',
         fonts: 'src/fonts/**/*.*'
     }
@@ -43,8 +43,7 @@ var config = {
     notify: false, //отключение уведомлений
     tunnel: true,
     host: 'localhost',
-    port: 9000,
-    logPrefix: "Frontend_Devil"
+    port: 9000
 };
 
 //Собираем html

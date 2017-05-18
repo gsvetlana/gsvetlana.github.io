@@ -2,3 +2,24 @@
 @import "core/fonts";
 @import "core/typography";
 
+@import "header";
+
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    &--img {
+        background-image: url('../img/header-bg.png');
+        background-size: cover;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-attachment: scroll;
+    }
+}
+
+.container {
+    width: 100%;
+    min-width: 20rem;
+    max-width: 60rem;
+}
+//HEADER

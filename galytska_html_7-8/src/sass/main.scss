@@ -4,6 +4,7 @@
 
 @import "header";
 @import "info";
+@import "news";
 
 
 .wrapper {
@@ -22,6 +23,9 @@
         background: linear-gradient(to top, #322539 0%, #745083 100%);
         box-shadow: 0 1px 8px rgba(0, 0, 0, .5);
     }
+    &--light-grey {
+        background-color: #f9f9f9;
+    }
 }
 
 .container {
@@ -35,6 +39,12 @@
     color: $white;
     font-weight: 400;
     text-transform: uppercase;
+    &--dark {
+        color: $dark;
+    }
+    &--purple {
+        color: #edbfff;
+    }
 }
 
 .article__text {

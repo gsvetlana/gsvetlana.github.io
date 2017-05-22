@@ -22,58 +22,64 @@
       }
       ]
     },
-    generateWrapper: function() {
-      var pageWrapper = document.createElement('div');
-      pageWrapper.classList.add('wrapper');
-      document.body.appendChild(pageWrapper);
-      return pageWrapper;
+
+    createForm: function() {
+      var form = document.createElement('form'),
+        formTitle = document.createElement('h1'),
+        fieldset = document.createElement('fieldset'),
+        btn = document.createElement('button');
+
+        formTitle.innerHTML = this.data.title;
+        formTitle.classList.add('title');
+        btn.setAttribute('type', 'submit');
+        btn.innerHTML = 'Проверить мои результаты';
+        btn.classList.add('submitBtn');
+
+        for(var i = 0, max = this.data.questions.length; i < max; i++) {
+          var result = this.createQuestion(this.data.questions[i]);
+          fieldset.appendChild(result);
+        }
+        form.appendChild(formTitle);
+        form.appendChild(fieldset);
+        form.appendChild(btn);
+
+        return form;
+
     },
 
-    generateTitle: function() {
-      var h1 = document.createElement('h1');
-      h1.innerHTML = this.data.title;
-      h1.classList.add('title');
-      return h1;
-    },
+    createQuestion: function(data) {
+      var section = document.createElement('section'),
+        h6 = document.createElement('h6'),
+        ul = document.createElement('ul');
 
-    generateQuestionsForm: function() {
-      var wrapper = this.generateWrapper();
-      wrapper.appendChild(this.generateTitle());
-      var form = document.createElement('form');
-      wrapper.appendChild(form);
-      var fieldset = document.createElement('fieldset');
-      form.appendChild(fieldset);
-      for (var i = 0, max = this.data.questions.length; i < max; i++){
-          var section = document.createElement('section');
-          var sectionTitle = document.createElement('h6');
-          section.appendChild(sectionTitle);
-          sectionTitle.innerHTML = this.data.questions[i].title;
-          fieldset.appendChild(section);
-          var ul = document.createElement('ul');
-          section.appendChild(ul);
-          for(var j = 0, maxJ = this.data.questions[i].answers.length; j < maxJ; j++){
-            var li = document.createElement('li');
-            var check = document.createElement('input');
-            check.type = 'checkbox';
-            ul.appendChild(li);
-            var label = document.createElement('label');
+        h6.innerHTML = data.title;
+
+      for(var i = 0, max = data.answers.length; i < max; i++){
+            var li = document.createElement('li'),
+              check = document.createElement('input'),
+              label = document.createElement('label');
+            check.setAttribute('type', 'checkbox');
+            var textElem = document.createTextNode(data.answers[i]);
             li.appendChild(label);
             label.appendChild(check);
-            var textElem = document.createTextNode(this.data.questions[i].answers[j]);
             label.appendChild(textElem);
-          }
+
+            ul.appendChild(li);
       }
 
-      var button = document.createElement('input');
-      button.type = 'submit';
-      button.value = 'Проверить мои результаты';
-      button.classList.add('submitBtn');
-      form.appendChild(button);
-    }
+      section.appendChild(h6);
+      section.appendChild(ul);
 
+      return section;
+    },
+
+    init: function () {
+      var parent = document.querySelector('.wrapper'),
+      form = this.createForm();
+
+      parent.appendChild(form);
+    }
   };
 
-  // test.generateWrapper();
-  // test.generateTitle();
-  test.generateQuestionsForm();
+  test.init();
 })();

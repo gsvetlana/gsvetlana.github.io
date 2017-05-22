@@ -1,6 +1,5 @@
 'use strict';
 (function() {
-  var pageWrapper;
   var test = {
     data: {
       title: 'Тест по программированию',
@@ -24,21 +23,24 @@
       ]
     },
     generateWrapper: function() {
-      pageWrapper = document.createElement('div');
+      var pageWrapper = document.createElement('div');
       pageWrapper.classList.add('wrapper');
       document.body.appendChild(pageWrapper);
+      return pageWrapper;
     },
 
     generateTitle: function() {
       var h1 = document.createElement('h1');
       h1.innerHTML = this.data.title;
       h1.classList.add('title');
-      pageWrapper.appendChild(h1);
+      return h1;
     },
 
     generateQuestionsForm: function() {
+      var wrapper = this.generateWrapper();
+      wrapper.appendChild(this.generateTitle());
       var form = document.createElement('form');
-      pageWrapper.appendChild(form);
+      wrapper.appendChild(form);
       var fieldset = document.createElement('fieldset');
       form.appendChild(fieldset);
       for (var i = 0, max = this.data.questions.length; i < max; i++){
@@ -71,7 +73,7 @@
 
   };
 
-  test.generateWrapper();
-  test.generateTitle();
+  // test.generateWrapper();
+  // test.generateTitle();
   test.generateQuestionsForm();
 })();

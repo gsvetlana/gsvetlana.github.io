@@ -23,20 +23,20 @@
       }
       ]
     },
-    gen_wrapper: function() {
+    generateWrapper: function() {
       pageWrapper = document.createElement('div');
       pageWrapper.classList.add('wrapper');
       document.body.appendChild(pageWrapper);
     },
 
-    gen_title: function() {
+    generateTitle: function() {
       var h1 = document.createElement('h1');
       h1.innerHTML = this.data.title;
       h1.classList.add('title');
       pageWrapper.appendChild(h1);
     },
 
-    gen_questions_form: function() {
+    generateQuestionsForm: function() {
       var form = document.createElement('form');
       pageWrapper.appendChild(form);
       var fieldset = document.createElement('fieldset');
@@ -71,7 +71,7 @@
 
   };
 
-  test.gen_wrapper();
-  test.gen_title();
-  test.gen_questions_form();
+  test.generateWrapper();
+  test.generateTitle();
+  test.generateQuestionsForm();
 })();

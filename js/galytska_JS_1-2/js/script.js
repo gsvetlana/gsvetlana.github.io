@@ -1,22 +1,25 @@
 'use strict';
 
-document.addEventListener("DOMContentLoaded", function () {
-    var btn = document.querySelector('.btn-warning').onclick = powCalculation;
-    var btn = document.querySelector('.btn-info').onclick = checkUserName;
+document.addEventListener('DOMContentLoaded', function () {
+    var btnPow = document.querySelector('.btn-warning');
+    btnPow.onclick = powCalculation;
+    var btnName = document.querySelector('.btn-info');
+    btnName.onclick = checkUserName;
 });
 
 function powCalculation () {
+    var value, arr = [];
     while(true) {
-        var value = prompt("Enter number and power", 'ex: 4, 2');
+        value = prompt('Enter number and power', 'ex: 4, 2');
         if(value.match(/-?\d+\,\s-?\d+/g) === null) {
             alert('Try again! Follow hint');
         } else {
-            var arr = value.split(/,\s/);
+            arr = value.split(/,\s/);
             break;
         }        
     }
 
-    if(arr[0] == 0 && arr[1] <= 0) {
+    if(arr[0] === 0 && arr[1] <= 0) {
         console.log('Result is not defined');
     } else if(arr[1] < 0) {
         console.log('Result of pow (' + arr[0] + ', ' + arr[1] + ') is: ' + 1/pow(+arr[0], Math.abs(arr[1])) );
@@ -76,4 +79,3 @@ function arraySearch (array, userName) {
     alert('Sorry! We cannot recognise you.');
         return;
 }
-

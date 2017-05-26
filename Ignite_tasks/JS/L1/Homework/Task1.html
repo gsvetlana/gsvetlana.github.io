@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homework Task1</title>
+</head>
+<body>
+    <!-- Создайте функцию find(arr, value), которая ищет в массиве arr значение value и возвращает его номер, если найдено, или -1, если не найдено. -->
+
+    <script>
+        function find(arr, value) {
+            'use strict';
+            for(var i = 0, max = arr.length; i < max; i++) {
+                if(arr[i] === value) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
+        var arr = [1,2,31,24,-67,5,3,555,79,-4,21,33,89,-90, -568, 10000];
+        console.log(find(arr, "string"));
+        console.log(find(arr, 555));
+
+    </script>
+</body>
+</html>

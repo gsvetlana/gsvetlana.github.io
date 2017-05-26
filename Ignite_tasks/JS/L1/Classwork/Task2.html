@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classwork Task2</title>
+</head>
+<body>
+    <!-- Создайте функцию isEmpty(obj), которая возвращает true, если в объекте нет свойств и false – если хоть одно свойство есть. -->
+    <script>
+
+        function isEmpty(obj) {
+            'use strict';
+            var count = 0;
+            for(var key in obj) {
+                if(obj.hasOwnProperty(key)) {
+                    count++;
+                }
+            }
+
+            if(count) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
+        var user = {};
+        console.log(isEmpty(user));
+        user.name = 'Vasya';
+        console.log(isEmpty(user));
+        delete user.name;
+        console.log(isEmpty(user));
+        
+
+        
+    </script>
+</body>
+</html>

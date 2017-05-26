@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Classwork Task3</title>
+</head>
+<body>
+    <!-- Дан массив чисел: [1,2,31,24,-67,5,3,555,79,-4,21,33,89,-90].
+
+Найдите максимальное и минимальное значение массива.
+Все положительные и четные числа запишите в другой массив. Результаты выведите на экран. -->
+
+    <script>
+        var arr = [1,2,31,24,-67,5,3,555,79,-4,21,33,89,-90, -568, 10000];
+
+        function minMax(array) {
+            console.log('Min value --> ' + Math.min.apply(null, array));
+            console.log('Max value --> ' + Math.max.apply(null, array));
+            //or 
+            var max = array[0],
+                min = array[0];
+            for(var i = 0, length = array.length; i < length; i++ ){
+                if(max < array[i]) max = array[i];
+                if(min > array[i]) min = array[i];
+            }
+            console.log('Max value --> ' + max);
+            console.log('Min value --> ' + min);
+        }
+
+        function positive(value) {
+            return value > 0;
+        }
+
+        minMax(arr);
+        var newArr = arr.filter(positive);
+        console.log(newArr);
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <a href="">ddd</a>
+    <a href="">ddd</a>
+    <a href="">fffg</a>
+    <a href="">hjhj</a>
+    <a href="">ujujuj</a>
+
+    <script>
+    'use strict';
+        var elements = document.getElementsByTagName('a');
+for (var i = 0; i < elements.length; i++) {
+  (function(localIndex){
+    elements[i].addEventListener('click', function(e) {
+      e.preventDefault();
+      alert('Link #' + localIndex);
+    }, false);
+  })(i);
+}
+    </script>
+</body>
+</html>

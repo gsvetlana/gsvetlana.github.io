@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+form {
+    width: 500px;
+    margin: 50px auto;
+}
+
+.show {
+    position: relative;
+    margin: 10px 0;
+}
+
+.show label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    top: 0;
+    background-color: #000;
+    border: 1px solid #fff;
+    width: 200px;
+    color: #fff;
+    text-align: center;
+    font-size: 12px;
+}
+
+input[type="text"] {
+    width: 200px;
+}
+
+#showhelp {
+    margin-top: 5px;
+}

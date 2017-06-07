@@ -1,24 +1,27 @@
 $(function() {
-    $('input[type="text"]').each(function() {
-        var $title = $(this).attr('title');
-        $(this).next().text($title);
+    'use strict';
+    var $tooltips = $('.tooltip'),
+        $inputs = $('input[type="text"]'),
+        $labels = $('.show > label');
 
-        var $width = $(this).outerWidth() + $(this).prev().outerWidth() + 5;
-        console.log($width);
-        $('.tooltip')
-            .css({ left: $width })
+    var $width = $inputs.outerWidth()  + $labels.outerWidth() + 10;
+    $tooltips.css({ left: $width });
+
+    $inputs.focusin(function () {
+        $(this).next().fadeToggle(600, 'linear');
+    }).focusout(function () {
+        $(this).next().fadeToggle('fast');
     });
 
-    $('input[type="text"]').hover(
-        function() { //over
-            $(this).siblings('.tooltip').show();
-    }, function() { //out
-            $('.tooltip').hide();
+
+    $('#showhelp').focusin(function () {
+        $tooltips.each(function() {
+            $(this).fadeToggle(600, 'linear');
+        });
+    }).focusout(function () {
+        $tooltips.each(function () {
+            $(this).fadeToggle(1000);
+        });
     });
 
-    $('#showhelp').on('click', function(event) {
-        $('.tooltip').toggle();
-        event.preventDefault();
-
-    });
 });

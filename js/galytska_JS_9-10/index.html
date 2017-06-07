@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/jcarousel.basic.css">
+    <!--<script src="js/jquery.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script src="js/jquery.jcarousel.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/menu-script.js"></script>
+
+    <link rel="stylesheet" href="css/wSelect.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <script src="js/wSelect.js"></script>
+
+</head>
+<body>
+<div class="wrapper">
+    <header class="header">
+        <div class="header__top">
+            <nav>
+                <ul id="menu">
+                    <li><a href="#">Nav 1</a></li>
+                    <li><a href="#">Nav 2</a></li>
+                    <li class="dropdown"><a href="#">Nav 3 <i class="fa fa-caret-down"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Nav 3.1</a></li>
+                            <li><a href="#">Nav 3.2</a></li>
+                            <li class="dropdown"><a href="#">Nav 3.3 <i class="fa fa-caret-right"></i></a>
+                                <ul class="submenu subsecond">
+                                    <li><a href="#">Nav 3.31</a></li>
+                                    <li><a href="#">Nav 3.32</a></li>
+                                    <li><a href="#">Nav 3.33</a></li>
+                                    <li class="dropdown"><a href="#">Nav 3.34 <i class="fa fa-caret-right"></i></a>
+                                        <ul class="submenu subsecond">
+                                            <li><a href="#">Nav 3.341</a></li>
+                                            <li><a href="#">Nav 3.342</a></li>
+                                            <li><a href="#">Nav 3.343</a></li>
+                                            <li><a href="#">Nav 3.344</a></li>
+                                            <li><a href="#">Nav 3.345</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Nav 3.35</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Nav 3.4</a></li>
+                            <li><a href="#">Nav 3.5</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Nav 4</a></li>
+                    <li><a href="#">Nav 5</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header__content--wrapper">
+        <div class="header__content">
+
+            <div class="jcarousel-wrapper">
+                <div class="jcarousel">
+                    <ul>
+                        <li><img src="img/img1.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/img2.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/img3.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/img4.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/img5.jpg" width="600" height="400" alt=""></li>
+                        <li><img src="img/img6.jpg" width="600" height="400" alt=""></li>
+                    </ul>
+                </div>
+                <a href="" class="jcarousel-control-prev">
+                    <img src="img/arrow.png" alt="">
+                </a>
+                <a href="" class="jcarousel-control-next">
+                    <img src="img/arrow-right.png" alt="">
+                </a>
+            </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="search-form">
+            <form action="#" class="select-example">
+                <fieldset>
+                    <legend>New style for select elements</legend>
+                    <ul class="search-options">
+                        <li>
+                            <label for="country-list" class="wLabel-left">Country:</label>
+                            <select name="country-list" id="country-list">
+                                <option value="">Select a Country</option>
+                                <option value="UA" data-icon="img/UA.png">Ukraine</option>
+                                <option value="AU" data-icon="img/AU.png">Australia</option>
+                                <option value="CA" data-icon="img/CA.png" disabled="disabled">Canada</option>
+                                <option value="PL" data-icon="img/PL.png">Poland</option>
+                                <option value="TH" data-icon="img/TH.png">Thailand</option>
+                                <option value="UK" data-icon="img/UK.png">England (United Kingdom)</option>
+                            </select>
+                        </li>
+                        <li>
+                            <label for="birth-month" class="wLabel-left">Birth day:</label>
+                            <select name="birth-month" id="birth-month">
+                                <option value="">Select Month</option>
+                                <option value="Jan">January</option>
+                                <option value="Feb">February</option>
+                                <option value="Mar">March</option>
+                                <option value="Apr">April</option>
+                                <option value="May">May</option>
+                                <option value="Jun">June</option>
+                                <option value="Jul">July</option>
+                                <option value="Aug">August</option>
+                                <option value="Sept">September</option>
+                                <option value="Oct">October</option>
+                                <option value="Nov">November</option>
+                                <option value="Dec">December</option>
+                            </select>
+                        </li>
+
+                        <li>
+                            <span class="wLabel-left">Favorite season</span>
+                            <span class="niceCheck"><input type="checkbox" name="season" id="season-summer" value="summer"></span>
+                            <label for="season-summer" class="checkbox-label">Summer</label>
+                            <span class="niceCheck"><input type="checkbox" name="season" id="season-fall" value="fall"></span>
+                            <label for="season-fall" class="checkbox-label">Fall</label>
+                            <span class="niceCheck"><input type="checkbox" name="season" id="season-winter" value="winter"></span>
+                            <label for="season-winter" class="checkbox-label">Winter</label>
+                            <span class="niceCheck"><input type="checkbox" name="season" id="season-spring" value="spring"></span>
+                            <label for="season-spring" class="checkbox-label">Spring</label>
+                        </li>
+
+                        <li>
+                            <span class="wLabel-left">Nationality</span>
+                            <input type="checkbox" name="nationality" id="nal-usa" class="checkbox-css" value="americans">
+                            <label for="nal-usa" class="checkbox-css-label">Americans</label>
+                            <input type="checkbox" name="nationality" id="nal-ca" class="checkbox-css" value="canadians">
+                            <label for="nal-ca" class="checkbox-css-label">Canadians</label>
+                            <input type="checkbox" name="nationality" id="nal-tr" class="checkbox-css" value="turks">
+                            <label for="nal-tr" class="checkbox-css-label">Turks</label>
+                            <input type="checkbox" name="nationality" id="nal-ua" class="checkbox-css" value="ukrainians">
+                            <label for="nal-ua" class="checkbox-css-label">Ukrainians</label>
+                        </li>
+                    </ul>
+                    <button class="select-next" title="This button won't do anything">Next step</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+</div>
+</body>
+</html>

@@ -1,25 +1,28 @@
-// jQuery | $
-
 // $(this) - dom-елемент, на якому спрацював event. Використовуємо
 // для зручності в callback-ах 
 
 $(function() {
-    
-    $('#tab-1').show();
+    'use strict';
+    var $tabs = $('.link'),
+        $content = $('.tabs-text'),
+        currentTab, currentContent;
 
-    $('.shifter li').on('click', function() {
-        // if( $(this).attr('class') == 'active'){
-        //     return false;
-        // }
+    $tabs.first().addClass('active');
+    $content.hide().first().show();
 
-        var link = $(this).children().attr('href'); //текст для показу
-        // var prevActive = $('li.active').children().attr('href'); //активна на момент кліка 
-        
-        // $('li.active').removeClass('active');
-        // $(this).addClass('active');
+    $tabs.on('focus', function (event) {
+        event.preventDefault();
 
-        $(prevActive).hide();
-        $(link).show();
+        currentTab = $(this);
+
+        $tabs.removeClass('active');
+        currentTab.addClass('active');
+
+        currentContent = currentTab.attr('href');
+        $content.hide();
+        $(currentContent).show();
+
     });
+
 
 });

@@ -24,7 +24,7 @@
     text-align: center;
 }
 
-.shifter li a {
+.link {
     display: block;
     width: 115px;
     height: 40px;
@@ -44,7 +44,7 @@
     display: none;
 }
 
-li.active a {
+.active {
     background-color: #007fff;
     color: #fff;
 }

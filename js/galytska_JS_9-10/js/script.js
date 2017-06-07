@@ -1,4 +1,5 @@
 $(function() {
+    'use strict';
     //carousel
     $('.jcarousel').jcarousel({
     });
@@ -36,14 +37,14 @@ $(function() {
     function changeCheck(el) {
         var $el = el,
             $input = $el.find('input').eq(0);
-        if(!$input.attr("checked")) {
-            $input.attr("checked", true);
+        if(!$input.attr('checked')) {
+            $input.attr('checked', true);
 
-            $el.css("background-position","-17px 0");
+            $el.css('background-position','-17px 0');
         } else {
-            $input.attr("checked", false);
+            $input.attr('checked', false);
 
-            $el.css("background-position","0 0");
+            $el.css('background-position','0 0');
         }
         return true;
     }

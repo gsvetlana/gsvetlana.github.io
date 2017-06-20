@@ -3,170 +3,90 @@
     padding: 0;
 }
 
-li {
+ul {
     list-style: none;
 }
 
-@font-face {
-    font-family: 'LeagueGothicRegular';
-    src: url('../fonts/LeagueGothicRegular/LeagueGothicRegular.eot');
-    src: url('../fonts/LeagueGothicRegular/LeagueGothicRegular.eot?#iefix')format('embedded-opentype'),
-    url('../fonts/LeagueGothicRegular/LeagueGothicRegular.woff') format('woff'),
-    url('../fonts/LeagueGothicRegular/LeagueGothicRegular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
+a {
+    text-decoration: none;
 }
 
 body {
-    font-family: LeagueGothicRegular, Helvetica, Arial, sans-serif;
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .wrapper {
-    background: #e6c1d3;
-}
-.header {
-    height: 700px;
-}
-
-.header__top,
-.header__content {
-    width: 960px;
-    margin: 0 auto;
-}
-
-.header__top {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-
-/*---------------menu---------------*/
-#menu {
-    margin: 30px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
 }
 
-#menu li{
-    text-transform: uppercase;
-    list-style: none;
+.wrapper--dark {
+    background-color: #323232;
 }
 
-#menu li a {
-    display: block;
-    margin: 3px;
-    padding: 3px;
-    text-decoration: none;
+.wrapper--red {
+    background-color: #FF6464;
+}
+
+.container {
+    width: 100%;
+    min-width: 20rem;
+    max-width: 60rem;
+}
+
+.page-header {
+    padding: 1.875rem 0;
+    text-align: center;
     color: #fff;
-    font-size: 24px;
-    text-shadow: 0 2px 2px rgba(0, 0, 0, .4);
 }
 
-#menu li a:hover {
-    color: #a45286;;
+nav {
+    padding: 0.625rem 0;
+}
+
+.menu {
+    display: flex;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.menu li a {
+    padding: 0 0.75rem;
+    line-height: 2.5rem;
+    color: #fff;
+}
+
+.fa-caret-down {
+    margin-left: 0.3125rem;
 }
 
 .dropdown {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
-.submenu {
-    display: none;
+.sub-menu {
     position: absolute;
+    width: 12.5rem;
+    top: 2.5rem;
     left: 0;
-    top: 40px;
-    width: 150px;
-    background-color: rgba(0, 0, 0, .6);
-    z-index: 999;
+    background-color: rgb(225,75,75);
 }
 
-.subsecond{
-    display: none;
-    position: absolute;
-    left: 150px;
+.sub-second {
     top: 0;
-}
-/*---------------menu end---------------*/
-
-.header__content {
-    height: 420px;
+    left: 12.5rem;
 }
 
-.header__content--wrapper {
-    width: 100%;
-    background-color: rgba(0, 0, 0, .1);
-}
-
-/*select*/
-main {
-    padding-bottom: 50px;
-}
-.select-next {
-    display: inline-block;
-    margin: 10px 25px;
-    font-weight: normal;
-    text-align: center;
-    vertical-align: middle;
-    cursor: pointer;
-    border: 5px solid #764278;
-    padding: 10px 46px;
-    font-size: 18px;
-    border-radius: 4px;
-    color: #fff;
-    background-color: #764278;
-}
-
-.search-form {
-    margin: 0 40px;
-}
-
-fieldset {
-    border:1px solid #737374;
-}
-
-/*JS checkbox*/
-.niceCheck {
-    width: 16px;
-    height: 17px;
-    display: inline-block;
-    cursor: pointer;
-    background: url("../img/checkbox.png");
-}
-
-.niceCheck input {
-    display: none;
-}
-
-.checkbox-label {
-    margin-right: 5px;
-}
-
-.label-month {
-    margin-top: 10px;
-}
-
-/*CSS checkbox*/
-.checkbox-css {
-    position: absolute;
-    clip: rect(0, 0, 0, 0);
-}
-
-.checkbox-css-label {
-    cursor: pointer;
-    margin-right: 5px;
-}
-
-.checkbox-css + .checkbox-css-label:before {
-    content: '';
-    display: inline-block;
-    width: 16px;
-    height: 17px;
-    background: url("../img/checkbox.png");
-    background-position: 0 0;
-    position: relative;
-    top: 3px;
-    margin-right: 3px;
-}
-
-.checkbox-css:checked + .checkbox-css-label:before {
-    background-position: -17px 0;
+.sub-menu li a {
+    border-bottom: solid 1px rgb(200,50,50);
+    margin: 0 0.625rem;
+    padding: 0;
 }

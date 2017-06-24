@@ -18,6 +18,7 @@ body {
 .wrapper {
     display: flex;
     justify-content: center;
+    padding: 0 15px;
 }
 
 .wrapper--dark {
@@ -40,6 +41,7 @@ body {
     color: #fff;
 }
 
+/*-------------------------------menu CSS-------------------------------*/
 nav {
     padding: 0.625rem 0;
 }
@@ -60,16 +62,21 @@ nav {
     padding: 0 0.75rem;
     line-height: 2.5rem;
     color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu li a:hover {
+    color: #8B3240;
+}
+
+.menu li a:hover .fa {
+    color: #fff;
 }
 
 .fa-caret-down {
     margin-left: 0.3125rem;
-}
-
-.dropdown {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .sub-menu {
@@ -78,6 +85,11 @@ nav {
     top: 2.5rem;
     left: 0;
     background-color: rgb(225,75,75);
+    z-index: 999;
+}
+
+.sub-menu li:not(:last-child) {
+    margin-right: 0;
 }
 
 .sub-second {
@@ -90,3 +102,179 @@ nav {
     margin: 0 0.625rem;
     padding: 0;
 }
+
+
+/*-------------------------------slider CSS-------------------------------*/
+.jcarousel-wrapper {
+    margin-top: 50px;
+    position: relative;
+    border: 10px solid #fff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 2px #999;
+    -moz-box-shadow: 0 0 2px #999;
+    box-shadow: 0 0 2px #999;
+}
+
+.jcarousel {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+}
+
+.jcarousel ul {
+    width: 20000em;
+    position: relative;
+}
+
+.jcarousel li {
+    float: left;
+    border: 1px solid #fff;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.jcarousel img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.jcarousel-pagination {
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -ms-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
+    margin: 0;
+}
+
+.jcarousel-pagination a {
+    text-decoration: none;
+    display: inline-block;
+    font-size: 11px;
+    height: 10px;
+    width: 10px;
+    line-height: 10px;
+    background: #fff;
+    color: #4E443C;
+    border-radius: 10px;
+    text-indent: -9999px;
+    margin-right: 7px;
+    -webkit-box-shadow: 0 0 2px #4E443C;
+    -moz-box-shadow: 0 0 2px #4E443C;
+    box-shadow: 0 0 2px #4E443C;
+}
+
+.jcarousel-pagination a.active {
+    background: #4E443C;
+    color: #fff;
+    -webkit-box-shadow: 0 0 2px #F0EFE7;
+    -moz-box-shadow: 0 0 2px #F0EFE7;
+    box-shadow: 0 0 2px #F0EFE7;
+}
+
+.jcarousel-control-prev,
+.jcarousel-control-next {
+    position: absolute;
+    top: 50%;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    background: #4E443C;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 1px #000;
+    font: 24px/27px Arial, sans-serif;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    -webkit-box-shadow: 0 0 4px #F0EFE7;
+    -moz-box-shadow: 0 0 4px #F0EFE7;
+    box-shadow: 0 0 4px #F0EFE7;
+}
+
+.jcarousel-control-prev {
+    left: 15px;
+}
+
+.jcarousel-control-next {
+    right: 15px;
+}
+
+/*-------------------------------select CSS-------------------------------*/
+.custom {
+    margin-top: 50px;
+    padding-bottom: 50px;
+}
+
+fieldset {
+    padding: 0 15px;
+    border: 1px solid #737374;
+}
+
+.select-next {
+    margin: 10px 25px;
+    cursor: pointer;
+    border: 5px solid #FF6464;
+    padding: 10px 46px;
+    font-size: 16px;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #FF6464;
+}
+
+.search-options {
+    margin-top: 25px;
+}
+
+.search-options li {
+    margin-bottom: 10px;
+}
+
+.niceCheck {
+    width: 16px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    background: url('../img/checkbox.png');
+}
+
+.niceCheck input {
+    display: none;
+}
+
+.niceCheck + label {
+    margin-right: 7px;
+}
+
+/*checkboxCSS*/
+.checkbox-css {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+}
+
+.checkbox-css-label {
+    cursor: pointer;
+    margin-right: 7px;
+}
+
+.checkbox-css-label:before {
+    content: '';
+    display: inline-block;
+    width: 16px;
+    height: 17px;
+    margin-right: 4px;
+    position: relative;
+    top: 3px;
+    background: url('../img/checkbox.png');
+}
+
+input[type=checkbox]:checked + label:before {
+    background-position: -18px 0;
+}
+

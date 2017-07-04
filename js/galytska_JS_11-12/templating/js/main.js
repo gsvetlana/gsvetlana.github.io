@@ -46,7 +46,7 @@
     parentTeam.innerHTML += templateTeam({data: membersData});
     parentInfo.innerHTML += templateInfo({data: membersData});
 
-    function checkMember () {
+    //function checkMember () {
         var  tabs = document.querySelectorAll('.member'),
             tabContent = document.querySelectorAll('.info'),
             currentTab;
@@ -70,7 +70,7 @@
                 target.matchedElement.classList.remove('hidden');
             }
         });
-    }
+    //}
 
-    checkMember();
+    //checkMember();
 })();

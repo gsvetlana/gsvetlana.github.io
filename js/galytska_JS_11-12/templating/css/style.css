@@ -53,6 +53,10 @@ body {
     margin-top: 60px;
 }
 
+.member:hover {
+    cursor: pointer;
+}
+
 .member__img {
     padding: 25px;
     background-color: #11343a;

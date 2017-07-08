@@ -31,7 +31,7 @@ body {
 }
 
 .section__title {
-    margin-top: 65px;
+    margin-top: 15px;
     color: #000;
     font-size: 22px;
     font-weight: 700;
@@ -51,6 +51,10 @@ body {
     display: flex;
     justify-content: space-around;
     margin-top: 60px;
+}
+
+.member:hover {
+    cursor: pointer;
 }
 
 .member__img {
@@ -127,6 +131,10 @@ body {
 
 .facebook {
     margin-right: 23px;
+}
+
+.hidden {
+    display: none;
 }
 
 .active {

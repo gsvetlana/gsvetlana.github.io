@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+
+.wrapper {
+    width: 100%;
+    min-width: 320px;
+    max-width: 960px;
+    margin: 0 auto;
+    padding-top: 25px;
+    color: #253145;
+}
+
+.title {
+    text-align: center;
+    color: #f25750;
+}
+
+fieldset {
+    border: none;
+}
+
+section {
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+section h6 {
+    font-size: 20px;
+}
+
+section ul {
+    padding-left: 30px;
+}
+
+section ul li {
+    margin-top: 5px;
+}
+
+.submitBtn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 46px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    border: 5px solid #f25750;
+    border-radius: 5px;
+    background-color: #f25750;
+    cursor: pointer;
+}
+

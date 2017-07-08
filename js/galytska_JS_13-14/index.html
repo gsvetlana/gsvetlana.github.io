@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Homework JS 13-14</title>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <form action="">
+            <script type="text/template" id="testJS">
+                <h1 class="title"><%- titleTest%></h1>
+                <fieldset>
+                    <% _.forEach(questions, function(item) { %>
+                    <section>
+                        <h6><%- item.title%></h6>
+                        <ul>
+                            <% _.forEach(item.answers, function(item) { %>
+                            <li>
+                                <label>
+                                    <input type="checkbox">
+                                    <%- item%>
+                                </label>
+                            </li>
+                            <% }); %>
+                        </ul>
+                    </section>
+                    <% }); %>
+                    <button type="submit" class="submitBtn">Проверить мои результаты</button>
+                </fieldset>
+            </script>
+        </form>
+    </div>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>

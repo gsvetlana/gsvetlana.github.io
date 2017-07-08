@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 55px;
+    background-color: lightgrey;
+}
+
+form {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.value {
+    border: none;
+}
+
+label {
+    display: block;
+}

@@ -6,6 +6,7 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Add to Table</title>
+    <script src="https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js"></script>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -21,10 +22,33 @@
                 <label for="email">Add user e-mail</label>
                 <input type="text" placeholder="Email" class="data-field" id="email">
             </fieldset>
-            <button>Add data</button>
+            <button class="addData">Add data</button>
         </form>
 
-
+        <table>
+            <caption>User Info</caption>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Surname</th>
+                    <th>Phone number</th>
+                    <th>Email address</th>
+                </tr>
+            </thead>
+            <tbody>
+                <script type="text/template" id="userRow">
+                    <% for(var i=0, max=list.length; i<max; i++) { %>
+                        <tr>
+                            <td><%- list[i].name %></td>
+                            <td><%- list[i].surname %></td>
+                            <td><%- list[i].tel %></td>
+                            <td><%- list[i].email %></td>
+                        </tr>
+                    <% } %>
+                </script>
+            </tbody>
+        </table>
     </div>
+    <script src="./js/main.js"></script>
 </body>
 </html>

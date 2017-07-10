@@ -22,9 +22,6 @@
     var btn = document.querySelector('.addData');
     btn.addEventListener('click', function(e) {
         e.preventDefault();
-        var input = document.createElement('p');
-
-        wrapper.appendChild(input);
         getData();
 
         var sourceUser = document.querySelector('#userRow').textContent,

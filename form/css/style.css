@@ -10,11 +10,15 @@
     margin: 0 auto;
     padding: 55px;
     background-color: lightgrey;
+
 }
 
-form {
-    width: 60%;
+.get-data {
+    width: 80%;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .value {
@@ -23,4 +27,28 @@ form {
 
 label {
     display: block;
+}
+
+.addData {
+    display: block;
+    width: 100px;
+    height: 20px;
+}
+
+table {
+    width: 100%;
+    margin-top: 25px;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 1px solid #000;
+}
+
+th {
+    height: 50px;
+}
+
+td {
+    padding: 10px;
 }

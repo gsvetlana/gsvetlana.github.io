@@ -9,12 +9,18 @@ ul {
 }
 
 .wrapper {
+    display: flex;
     width: 100%;
     min-width: 320px;
     max-width: 960px;
+    height: 100vh;
     margin: 0 auto;
-    padding-top: 25px;
     color: #253145;
+
+}
+
+form {
+    margin: auto;
 }
 
 .title {
@@ -54,5 +60,33 @@ section ul li {
     border-radius: 5px;
     background-color: #f25750;
     cursor: pointer;
+}
+
+#blockscreen {
+    position: fixed;
+    display: flex;
+    background: rgba(0, 0, 0, .5);
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+#modalwindow {
+    width: 320px;
+    height: 320px;
+    margin: auto;
+    z-index: 11;
+    background: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #a1a1a1;
+    box-shadow: 0 0 10px #444;
+}
+
+#modalwindow p {
+    margin-top: 25%;
+    text-align: center;
+    font-size: 24px;
 }
 
